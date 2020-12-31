@@ -8,8 +8,22 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.kieran1494.autohotkey.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.kieran1494.autohotkey.services.MyProjectService"/>
+        <fileType
+                name="AutoHotkey"
+                fileNames="autohotkey"
+                extensions="ahk"
+                implementationClass="com.github.kieran1494.autohotkey.AutoHotkeyFileType"
+                fieldName="INSTANCE"
+                language="AutoHotkey"
+        />
+<!--        <lang.parserDefinition language="Routes" implementationClass="com.github.tomasmilata.intelliroutes.RoutesParserDefinition"/>-->
+<!--        <lang.syntaxHighlighterFactory language="Routes" implementationClass="com.github.tomasmilata.intelliroutes.RoutesSyntaxHighlighterFactory"/>-->
+<!--        <colorSettingsPage implementation="com.github.tomasmilata.intelliroutes.RoutesColorSettingsPage"/>-->
+<!--        <completion.contributor language="Routes" implementationClass="com.github.tomasmilata.intelliroutes.HttpVerbsCompletionContributor"/>-->
+<!--        <completion.contributor language="Routes" implementationClass="com.github.tomasmilata.intelliroutes.JavaRoutesCompletionContributor"/>-->
+<!--        <completion.contributor language="Routes" implementationClass="com.github.tomasmilata.intelliroutes.OtherRoutersCompletionContributor"/>-->
+<!--        <gotoDeclarationHandler implementation="com.github.tomasmilata.intelliroutes.RoutesGotoControllerHandler" />-->
+<!--        <gotoDeclarationHandler implementation="com.github.tomasmilata.intelliroutes.RoutesGotoRouterHandler" />-->
     </extensions>
 
     <applicationListeners>
